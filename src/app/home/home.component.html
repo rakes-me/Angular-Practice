@@ -1,0 +1,11 @@
+<router-outlet></router-outlet>
+<app-header></app-header>
+<app-button (onClick)="addTodo()"></app-button>
+<div class="card">
+  <div>
+    <h2>Pending</h2>
+    <app-todo-list></app-todo-list>
+    <h2>Done</h2>
+    <app-todo-list [listType]="true"></app-todo-list>
+  </div>
+</div>

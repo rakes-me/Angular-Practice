@@ -1,0 +1,15 @@
+<ul>
+  <li *ngFor="let todo of todoList">
+    <span
+      ><input
+        type="checkbox"
+        name="{{ todo.task }}"
+        id="{{ todo.task }}"
+        [checked]="listType"
+        (click)="changeStatus(todo)"
+      />
+      {{ todo.task }}
+      <a [routerLink]="todo.task">Edit</a>
+    </span>
+  </li>
+</ul>
